@@ -1,0 +1,20 @@
+version: '2.2'
+services:
+  pia:
+    image: qmcgaw/private-internet-access
+    container_name: pia
+    init: true
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - USER=
+      - PASSWORD=
+      - REGION=
+      - EXTRA_SUBNETS=192.168.1.0/24
+      - PROTOCOL=tcp
+    ports:
+      - 8000:80/tcp
+  rtorrent:
+    image: diameter/rtorrent-rutorrent:latest
+    container_name: rtorrent
+    network_mode: "service:pia"
