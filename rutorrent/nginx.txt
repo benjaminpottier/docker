@@ -1,0 +1,8 @@
+location /rutorrent {
+  return 301 $scheme://$host/rutorrent/;
+}
+
+location ^~ /rutorrent/ {
+  proxy_pass http://$ip:8000;
+  rewrite /rutorrent(.*) $1 break;
+}
