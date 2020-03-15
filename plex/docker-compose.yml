@@ -1,0 +1,10 @@
+version: '2'
+services:
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker:plexpass
+    network_mode: "host"
+    volumes:
+      - /path/to/config:/config
+      - /tmp/:/transcode
+      - /path/to/data:/data
