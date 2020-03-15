@@ -1,0 +1,13 @@
+version: '2'
+services:
+  plexpy:
+    container_name: plexpy
+    image: linuxserver/plexpy
+    environment:
+      - PGID=1000
+      - PUID=1000
+    ports:
+      - "8181:8181"
+    volumes:
+      - /path/to/config:/config
+      - /etc/letsencrypt:/etc/letsencrypt:rw
