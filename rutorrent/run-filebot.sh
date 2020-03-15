@@ -8,7 +8,7 @@ filebot -script fn:amc \
   -r \
   --action hardlink \
   --conflict skip \
-	-non-strict \
-	--log-file $HOME/filebot/amc.log \
-	--def excludeList=$HOME/filebot/amc-exlude-list.txt \
+  -non-strict \
+  --log-file $HOME/filebot/amc.log \
+  --def excludeList=$HOME/filebot/amc-exlude-list.txt \
   $COMPLETE_DIR
