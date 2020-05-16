@@ -5,9 +5,9 @@ services:
     image: plexinc/pms-docker:plexpass
     network_mode: "host"
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=1003
+      - PGID=1003
     volumes:
-      - /path/to/config:/config
+      - /home/plex:/config
       - /tmp/:/transcode
       - /tank/media:/data
