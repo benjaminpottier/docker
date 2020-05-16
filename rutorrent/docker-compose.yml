@@ -18,3 +18,5 @@ services:
     image: diameter/rtorrent-rutorrent:latest
     container_name: rtorrent
     network_mode: "service:pia"
+    volumes:
+      - /tank/media/Downloads:/downloads
