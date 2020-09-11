@@ -12,9 +12,15 @@ services:
       - REGION=
       - EXTRA_SUBNETS=192.168.1.0/24
       - PROTOCOL=tcp
+      - PIA_ENCRYPTION=normal
+      - TINYPROXY=off
+      - SHADOWSOCKS=off
     ports:
       - 8000:80/tcp
   rtorrent:
+    environment:
+      - USR_ID=1000
+      - GRP_ID=1003
     image: diameter/rtorrent-rutorrent:latest
     container_name: rtorrent
     network_mode: "service:pia"
