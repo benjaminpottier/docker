@@ -6,10 +6,9 @@ services:
     init: true
     cap_add:
       - NET_ADMIN
+    env_file:
+      - .env
     environment:
-      - USER=
-      - PASSWORD=
-      - REGION=
       - EXTRA_SUBNETS=192.168.1.0/24
       - PROTOCOL=tcp
       - PIA_ENCRYPTION=normal
