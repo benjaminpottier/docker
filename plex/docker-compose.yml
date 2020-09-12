@@ -4,6 +4,7 @@ services:
     container_name: plex
     image: plexinc/pms-docker:plexpass
     network_mode: "host"
+    shm_size: '4gb'
     environment:
       - PUID=1003
       - PGID=1003
