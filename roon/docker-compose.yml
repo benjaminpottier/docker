@@ -1,0 +1,13 @@
+version: '2'
+services:
+  plex:
+    container_name: roon_core
+    image: steefdebruijn/docker-roonserver:latest
+    network_mode: "host"
+    environment:
+      - "TZ=America/New_York"
+    volumes:
+      - /tank/roon/app:/app
+      - /tank/roon/data:/data
+      - /tank/roon/music:/music
+      - /tank/roon/backup:/backup
